@@ -6,7 +6,9 @@
     <class name="co.edu.usbcali.abet.Materia" table="MATERIA" schema="TESIS">
         <id name="idCodigoMateria" type="java.lang.Long">
             <column name="id_codigo_materia" precision="22" scale="0" />
-            <generator class="assigned" />
+           <generator class="sequence" >
+            <param name="sequence">SEQUENCE_MATERIA</param>
+           </generator>
         </id>
         <property name="nombre" type="java.lang.String">
             <column name="nombre" length="100" />

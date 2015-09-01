@@ -6,7 +6,9 @@
     <class name="co.edu.usbcali.abet.OutcomePorCurso" table="OUTCOME_POR_CURSO" schema="TESIS">
         <id name="idOutcomePorCurso" type="java.lang.Long">
             <column name="id_outcome_por_curso" precision="22" scale="0" />
-            <generator class="assigned" />
+           <generator class="sequence" >
+            <param name="sequence">SEQUENCE_OUTCOME_POR_CURSO</param>
+           </generator>
         </id>
         <many-to-one name="outcome" class="co.edu.usbcali.abet.Outcome" fetch="select">
             <column name="id_outcome" precision="22" scale="0" />

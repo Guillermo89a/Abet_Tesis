@@ -6,7 +6,9 @@
     <class name="co.edu.usbcali.abet.Curso" table="CURSO" schema="TESIS">
         <id name="idCurso" type="java.lang.Long">
             <column name="id_curso" precision="22" scale="0" />
-            <generator class="assigned" />
+            <generator class="sequence" >
+            <param name="sequence">SEQUENCE_CURSO</param>
+           </generator>
         </id>
         <many-to-one name="docente" class="co.edu.usbcali.abet.Docente" fetch="select">
             <column name="id_codigo_docente" precision="22" scale="0" />

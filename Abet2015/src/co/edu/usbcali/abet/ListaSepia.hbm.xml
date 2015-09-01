@@ -6,7 +6,9 @@
     <class name="co.edu.usbcali.abet.ListaSepia" table="LISTA_SEPIA" schema="TESIS">
         <id name="idListaSepia" type="java.lang.Long">
             <column name="id_lista_sepia" precision="22" scale="0" />
-            <generator class="assigned" />
+            <generator class="sequence" >
+            <param name="sequence">SEQUENCE_LISTA_SEPIA</param>
+           </generator>
         </id>
         <many-to-one name="curso" class="co.edu.usbcali.abet.Curso" fetch="select">
             <column name="id_curso" precision="22" scale="0" />

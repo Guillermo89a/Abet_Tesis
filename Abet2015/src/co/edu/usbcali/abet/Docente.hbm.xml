@@ -6,7 +6,9 @@
     <class name="co.edu.usbcali.abet.Docente" table="DOCENTE" schema="TESIS">
         <id name="idCodigoDocente" type="java.lang.Long">
             <column name="id_codigo_docente" precision="22" scale="0" />
-            <generator class="assigned" />
+          <generator class="sequence" >
+            <param name="sequence">SEQUENCE_DOCENTE</param>
+           </generator>
         </id>
         <property name="nombreDocente" type="java.lang.String">
             <column name="nombre_docente" length="100" />
